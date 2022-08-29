@@ -1,4 +1,4 @@
-# This function is best used to compute t-tests for multiple outcome variables. 
+# This function is best used to compute t-tests for multiple outcome variables; ensure these outcome variables are grouped together with no other-type variables in between. This can be as easy as using the dplyr::select function to first group your outcome variables of interest together.
 # You will get two outputs: one with full results and one with concise results. 
 
 t_test_results <- function(dataframe, grouping_column_number,
