@@ -52,7 +52,7 @@ t_test_results <- function(dataframe, grouping_column_number,
                                                    var.equal = var.equal.argument,
                                                    alternative = alternative.argument)$conf.int[1],2), nsmall = 2), ", ", format(round(t.test(dataframe[, i] ~ grouping_column,
                                                                                                                                               var.equal = F,
-                                                                                                                                              alternative = "two.sided")$conf.int[2],2), nsmall = 2), "]", sep = "")
+                                                                                                                                              alternative = alternative.argument)$conf.int[2],2), nsmall = 2), "]", sep = "")
     cohen_d[i] <- effsize::cohen.d(dataframe[, i] ~ grouping_column,
                                    pooled = pooled.argument,
                                    hedges.correction = hedges.correction.argument,
